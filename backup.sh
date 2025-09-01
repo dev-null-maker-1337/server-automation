@@ -2,6 +2,8 @@
 
 # A simple script to backup remote directories
 
+# TODO: Overwrite config.ini with config.local.ini values
+
 CONFIG_FILE="config.ini"
 
 # Load configuration
