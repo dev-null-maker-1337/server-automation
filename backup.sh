@@ -11,6 +11,11 @@ log() {
   echo "$(date '+%Y-%m-%d %H:%M:%S') - $1" >> "$LOG_FILE"
 }
 
+if ! command -v rsync &> /dev/null; then
+    echo "Error: rsync could not be found. Please install it."
+    exit 1
+fi
+
 # Load configuration
 if [ -f "$CONFIG_FILE" ]; then
   source "$CONFIG_FILE"
